@@ -9,17 +9,16 @@ import android.view.ViewGroup;
 
 import com.example.linxi.qzone.R;
 
-
 /**
  * Created by linxi on 2017/1/9.
  */
 
-public class MyzoneFragment extends Fragment {
+public class MyfeedFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View myzoneLayout=inflater.inflate(R.layout.myzone_layout,container,false);
-        return myzoneLayout;
+        View myfeedLayout=inflater.inflate(R.layout.myfeed_layout,container,false);
+        return myfeedLayout;
 
     }
 }
