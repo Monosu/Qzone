@@ -16,6 +16,7 @@ import java.util.List;
  */
 
 public class FriendfeedAdapter extends ArrayAdapter {
+    //提交
     private int resource;
     private List<Journal> journalList;
     private Context context;
