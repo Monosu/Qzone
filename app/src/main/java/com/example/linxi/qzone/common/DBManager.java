@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBManager extends SQLiteOpenHelper {
     private static final String dbName="myqzone.db";
     private static final int dbVersion=1;
-    private String oSQL="CREATE TABLE IF NOT EXITS USERINFO(" +
+    private String oSQL="CREATE TABLE IF NOT EXISTS USERINFO(" +
             "id INTEGER," +
             "loginname VARCHAR," +
             "password VARCHAR," +

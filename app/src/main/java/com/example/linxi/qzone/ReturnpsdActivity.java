@@ -3,14 +3,15 @@ package com.example.linxi.qzone;
 import android.app.Activity;
 import android.os.Bundle;
 
+
 /**
- * Created by linxi on 2017/1/9.
+ * Created by linxi on 2017/2/12.
  */
 
-public class RegistActivity extends Activity {
+public class ReturnpsdActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.regist);
+        setContentView(R.layout.return_psd);
     }
 }

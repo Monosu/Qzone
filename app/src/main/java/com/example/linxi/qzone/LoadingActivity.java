@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.example.linxi.qzone.common.SysConfig;
+
 /**
  * Created by linxi on 2017/1/9.
  */
@@ -19,6 +21,9 @@ public class LoadingActivity extends Activity {
         public void handleMessage(Message msg) {
             if (msg.what==0x12){
                 Intent oIntent=new Intent(LoadingActivity.this,MainActivity.class);
+                startActivity(oIntent);
+            }else if (msg.what==0x13){
+                Intent oIntent=new Intent(LoadingActivity.this,LoginActivity.class);
                 startActivity(oIntent);
             }
             finish();
@@ -37,8 +42,12 @@ public class LoadingActivity extends Activity {
                     Thread.sleep(2000);
                     shared=getSharedPreferences("qq",MODE_PRIVATE);
 
-                    oHandler.sendEmptyMessage(0x12);
-                } catch (InterruptedException e) {
+                    if (SysConfig.loginUserInfo==null||!(shared.getBoolean("islogin",true))){
+                        oHandler.sendEmptyMessage(0x13);
+                    }else {
+                        oHandler.sendEmptyMessage(0x12);
+                    }
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
